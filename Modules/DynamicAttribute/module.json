@@ -1,0 +1,13 @@
+{
+    "name": "DynamicAttribute",
+    "alias": "dynamicattribute",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\DynamicAttribute\\Providers\\DynamicAttributeServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
