@@ -1,0 +1,15 @@
+{
+    "name": "WebRTCAudioVideoChat",
+    "alias": "webrtcaudiovideochat",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\WebRTCAudioVideoChat\\Providers\\WebRTCAudioVideoChatServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "views": "Resources/views"
+
+}
