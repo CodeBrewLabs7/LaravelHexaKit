@@ -1,5 +1,9 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/css/auth-module.css": "/css/auth-module.css"
+    "/css/auth-module.css": "/css/auth-module.css",
+    "/js/webrtcaudiovideochat.js": "/js/webrtcaudiovideochat.js",
+    "/css/webrtcaudiovideochat.css": "/css/webrtcaudiovideochat.css",
+    "/modules/webrtcaudiovideochat/js/webrtcaudiovideochat.js": "/modules/webrtcaudiovideochat/js/webrtcaudiovideochat.js",
+    "/modules/webrtcaudiovideochat/css/webrtcaudiovideochat.css": "/modules/webrtcaudiovideochat/css/webrtcaudiovideochat.css"
 }

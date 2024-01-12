@@ -2,5 +2,6 @@
     "Auth": true,
     "CreateNewUsersTable": true,
     "Blog": true,
-    "DynamicAttribute": true
+    "DynamicAttribute": true,
+    "WebRTCAudioVideoChat": true
 }
