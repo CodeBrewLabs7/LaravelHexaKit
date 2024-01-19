@@ -135,6 +135,9 @@ trait AuthUser
             case Users::TYPE_USER:
                 $redirectPath = 'user/dashboard';
                 break;
+            case Users::TYPE_ADMIN:
+                $redirectPath = 'adminpanel/dashboard';
+                break;
         }
         // Customize the redirect path after a successful login
         return redirect()->intended($redirectPath);

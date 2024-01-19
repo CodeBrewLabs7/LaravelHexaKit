@@ -28,7 +28,7 @@ Route::prefix('user')->group(function() {
     Route::middleware(['guest.check'])->group(function () {
         Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
     });
-    
+
     Route::middleware(['auth.check'])->group(function () {
         Route::get('/dashboard', [AuthController::class, 'userDashboard'])->name('user.dashboard');
     });
@@ -40,6 +40,15 @@ Route::prefix('vendor')->group(function() {
     });
     Route::middleware(['auth.check'])->group(function () {
         Route::get('/dashbaord', [AuthController::class,'vendorDashboard'])->name('vendor.dashboard');
+    });
+});
+
+Route::prefix('admin')->group(function() {
+    Route::middleware(['guest.check'])->group(function () {
+        Route::get('/register', [AuthController::class, 'showAdminRegistration'])->name('admin.register');
+    });
+    Route::middleware(['auth.check'])->group(function () {
+        Route::get('/dashbaord', [AuthController::class,'adminDashboard'])->name('admin.dashboard');
     });
 });
 

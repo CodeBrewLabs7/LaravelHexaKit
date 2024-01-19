@@ -40,7 +40,7 @@ class AuthController extends Controller
         // Call the registerUser method to handle user registration
         $this->registerUser($request, $type);
         $user = Auth::user();
-        
+
         switch($user->type) {
             case Users::TYPE_VENDOR:
                 $redirectPath = 'vendor/dashbaord';
@@ -77,7 +77,7 @@ class AuthController extends Controller
     }
 
     public function setPassword(Request $request) {
-        
+
     }
 
     public function logoutUser(Request $request) {
@@ -92,5 +92,9 @@ class AuthController extends Controller
 
     public function vendorDashboard(Request $request) {
         return 4;
+    }
+
+    public function adminDashboard(Request $request) {
+        return 1;
     }
 }
