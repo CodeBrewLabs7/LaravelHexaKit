@@ -16,7 +16,9 @@
                   </li>
                 </ul>
                 <div class="clearfix"></div>
-                <button type="button" class="btn btn-success AddRolebtn">{{ __('Add New Role') }}</button>
+                @can('role-create')
+                    <button type="button" class="btn btn-success AddRolebtn">{{ __('Add New Role') }}</button>
+                @endcan
               </div>
               <div class="x_content">
                   <div class="row">
@@ -36,7 +38,7 @@
                                           <td>{{$loop->iteration}}</td>
                                           <td>{{$key->name}}</td>
                                           <td>
-                                            <a href="javascript::void();" class="btn bg-primary edit_role" data-id="{{ $key->id }}">Edit</a>  <a href="javascript::void();" class="btn bg-danger delete_role" data-id="{{ $key->id }}">Delete</a> <a href="javascript::void();" class="btn bg-warning view_permissions" data-id="{{ $key->id }}">View</a>
+                                            @can('role-edit') <a href="javascript::void();" class="btn bg-primary edit_role" data-id="{{ $key->id }}">Edit</a> @endcan @can('role-edit') <a href="javascript::void();" class="btn bg-danger delete_role" data-id="{{ $key->id }}">Delete</a> @endcan
                                           </td>
                                        </tr>
                                     @endforeach

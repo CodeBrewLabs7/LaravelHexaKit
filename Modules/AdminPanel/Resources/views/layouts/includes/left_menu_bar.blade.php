@@ -32,8 +32,12 @@
             </li>
             <li><a><i class="fa fa-users"></i> Users <span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu">
-                <li><a href="{{ route('users.index') }}">Users</a></li>
-                <li><a href="{{ route('roles.index') }}">Roles</a></li>
+                @can('user-list')
+                    <li><a href="{{ route('users.index') }}">Users</a></li>
+                @endcan
+                @can('role-list')
+                    <li><a href="{{ route('roles.index') }}">Roles</a></li>
+                @endcan
               </ul>
             </li>
           </ul>

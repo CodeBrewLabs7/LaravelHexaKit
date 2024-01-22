@@ -16,7 +16,9 @@
                   </li>
                 </ul>
                 <div class="clearfix"></div>
-                <button type="button" class="btn btn-success AddMemberbtn">{{ __('Add New User') }}</button>
+                @can('user-create')
+                    <button type="button" class="btn btn-success AddMemberbtn">{{ __('Add New User') }}</button>
+                @endcan
               </div>
               <div class="x_content">
                   <div class="row">
@@ -40,7 +42,7 @@
                                           <td>{{$key->email}}</td>
                                           <td>{{$key->phone_number}}</td>
                                           <td>
-                                            <a href="javascript::void();" class="btn bg-primary edit_member" data-id="{{ $key->id }}">Edit</a>  <a href="javascript::void();" class="btn bg-danger delete_member" data-id="{{ $key->id }}">Delete</a>
+                                            @can('user-edit') <a href="javascript::void();" class="btn bg-primary edit_member" data-id="{{ $key->id }}">Edit</a> @endcan  @can('user-delete') <a href="javascript::void();" class="btn bg-danger delete_member" data-id="{{ $key->id }}">Delete</a> @endcan
                                           </td>
                                        </tr>
                                     @endforeach
