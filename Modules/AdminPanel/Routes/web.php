@@ -12,6 +12,6 @@
 */
 Route::middleware(['auth.check'])->group(function () {
     Route::prefix('adminpanel')->group(function() {
-        Route::get('/dashboard', 'AdminPanelController@index');
+        Route::get('/dashboard', 'AdminPanelController@index')->name('adminpanel.dashboard');
     });
 });

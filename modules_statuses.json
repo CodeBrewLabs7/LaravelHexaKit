@@ -4,5 +4,6 @@
     "Blog": true,
     "DynamicAttribute": true,
     "WebRTCAudioVideoChat": true,
-    "AdminPanel": true
+    "AdminPanel": true,
+    "Users": true
 }

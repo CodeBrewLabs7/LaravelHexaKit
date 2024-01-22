@@ -23,5 +23,9 @@
 
         @include('adminpanel::layouts.includes.footer_files')
 
+        @yield('page-script')
+
+        @stack('js')
+
     </body>
 </html>
