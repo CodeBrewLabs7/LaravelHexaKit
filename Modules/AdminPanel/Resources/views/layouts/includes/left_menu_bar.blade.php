@@ -30,16 +30,18 @@
                 <li><a href="{{ route('adminpanel.dashboard') }}">Dashboard</a></li>
               </ul>
             </li>
-            <li><a><i class="fa fa-users"></i> Users <span class="fa fa-chevron-down"></span></a>
-              <ul class="nav child_menu">
-                @can('user-list')
-                    <li><a href="{{ route('users.index') }}">Users</a></li>
-                @endcan
-                @can('role-list')
-                    <li><a href="{{ route('roles.index') }}">Roles</a></li>
-                @endcan
-              </ul>
-            </li>
+            @if(isModuleEnabled('Users'))
+                <li><a><i class="fa fa-users"></i> Users <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        @can('user-list')
+                            <li><a href="{{ route('users.index') }}">Users</a></li>
+                        @endcan
+                        @can('role-list')
+                            <li><a href="{{ route('roles.index') }}">Roles</a></li>
+                        @endcan
+                    </ul>
+                </li>
+            @endif
           </ul>
         </div>
 
