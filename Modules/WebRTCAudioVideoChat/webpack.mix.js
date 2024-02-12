@@ -4,7 +4,7 @@ dotenvExpand(require('dotenv').config({ path: '../../.env'/*, debug: true*/}));
 const mix = require('laravel-mix');
 require('laravel-mix-merge-manifest');
 
-mix.setPublicPath('../../public').mergeManifest();
+mix.setPublicPath('../../public/modules/webrtcaudiovideochat').mergeManifest();
 
 mix.js(__dirname + '/Resources/assets/js/app.js', 'modules/webrtcaudiovideochat/js/webrtcaudiovideochat.js')
     .sass( __dirname + '/Resources/assets/sass/app.scss', 'modules/webrtcaudiovideochat/css/webrtcaudiovideochat.css');
