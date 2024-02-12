@@ -55,7 +55,7 @@ class Users extends Model implements Authenticatable
     {
         return 'remember_token';
     }
-    
+
     // protected static function newFactory()
     // {
     //     return \Modules\Auth\Database\factories\UsersFactory::new();
