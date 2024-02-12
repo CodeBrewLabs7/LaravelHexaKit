@@ -27,7 +27,6 @@ class RolePermissionSeeder extends Seeder
             'user-create',
             'user-edit',
             'user-delete',
-
             'profile-index',
 
             'role-list',
@@ -59,6 +58,8 @@ class RolePermissionSeeder extends Seeder
             'websetting-edit',
             'user-activity',
             'log-view',
+            'user-chat',
+
         ];
 
         //create and assign permission 
