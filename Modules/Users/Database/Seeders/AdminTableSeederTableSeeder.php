@@ -17,6 +17,7 @@ class AdminTableSeederTableSeeder extends Seeder
      */
     public function run()
     {
+        //Admin User Seeeder
         Model::unguard();
 
         $user = User::where("email","admin@gmail.com")->first();
