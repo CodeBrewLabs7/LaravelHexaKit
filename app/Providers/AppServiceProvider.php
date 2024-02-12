@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use Laravel\Passport\Passport;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
-use Auth;
+use Illuminate\Support\Facades\Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -17,6 +19,8 @@ class AppServiceProvider extends ServiceProvider
         //
     }
 
+
+
     /**
      * Bootstrap any application services.
      *
@@ -24,6 +28,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // $this->registerPolicies();
+        Schema::defaultStringLength(191);
     }
 }

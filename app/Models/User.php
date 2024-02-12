@@ -6,25 +6,37 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
+use Laravel\Passport\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
+use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\Auth;
+use Haruncpi\LaravelUserActivity\Traits\Loggable;
+
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable, HasRoles;
+    use HasFactory, Notifiable, HasApiTokens, HasRoles, Loggable;
+
+    // protected $guard = 'admin';
 
     /**
      * The attributes that are mass assignable.
      *
-     * @var array<int, string>
+     * @var array
      */
-    protected $fillable = ['name', 'email', 'phone_number', 'is_email_verified', 'email_verified_at', 'is_phone_verified', 'phone_verified_at', 'password', 'type', 'status', 'country_id', 'role_id', 'auth_token', 'system_id', 'remember_token'];
-
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+        'mobile',
+        'image',
+        'status',
+    ];
 
     /**
-     * The attributes that should be hidden for serialization.
+     * The attributes that should be hidden for arrays.
      *
-     * @var array<int, string>
+     * @var array
      */
     protected $hidden = [
         'password',
@@ -32,16 +44,18 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be cast.
+     * The attributes that should be cast to native types.
      *
-     * @var array<string, string>
+     * @var array
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    
 
-    const TYPE_ADMIN = 1;
-    const TYPE_SUB_ADMIN = 2;
-    const TYPE_USER = 3;
-    const TYPE_VENDOR = 4;
+    public function getRoleCodes()
+    {
+        $user = Auth::user();
+        return $roles = Role::where('name',$user->getRoleNames())->get();
+    }
 }
