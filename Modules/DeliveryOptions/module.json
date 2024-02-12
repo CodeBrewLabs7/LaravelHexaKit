@@ -1,0 +1,13 @@
+{
+    "name": "DeliveryOptions",
+    "alias": "deliveryoptions",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\DeliveryOptions\\Providers\\DeliveryOptionsServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

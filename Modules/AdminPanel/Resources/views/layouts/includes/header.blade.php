@@ -8,8 +8,9 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    @yield('page_title')
     <title>@yield('title')</title>
+    @yield('page_css')
 
     <!-- Bootstrap -->
     <link href="{{ asset('modules/adminpanel/vendors/bootstrap/distFile/css/bootstrap.min.css') }}" rel="stylesheet">
