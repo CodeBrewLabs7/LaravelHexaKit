@@ -1,16 +1,13 @@
-@extends('webrtcaudiovideochat::layouts.master')
-@section('css')
-@parent
+@extends('admin.layouts.master')
+
     <link href="{{ asset('modules/webrtcaudiovideochat/css/webrtcaudiovideochat.css') }}" rel="stylesheet" type="text/css">
     <script src="{{ asset('modules/webrtcaudiovideochat/js/app.js') }}"></script>
-@endsection
-
+    @stack('css')
 @section('content')
 
 
     <div class="app">
-        @include('webrtcaudiovideochat::chat-parts.header.index')
-        <div class="wrapper">
+        <div class="chat-wrapper">
             @include('webrtcaudiovideochat::chat-parts.left-bar.index')
 
             <div class="chat-area right">
@@ -28,7 +25,6 @@
 
 @endsection
 
-@section('js')
 
     <script>
         const toggleButton = document.querySelector('.dark-light');
@@ -48,4 +44,4 @@
         });
     </script>
 
-@endsection
+@stack('scripts')
