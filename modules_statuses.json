@@ -4,5 +4,5 @@
     "Blog": true,
     "DynamicAttribute": true,
     "WebRTCAudioVideoChat": true,
-    "SmsAndEmail": true
+    "Users": true
 }

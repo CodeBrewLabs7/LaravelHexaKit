@@ -11,9 +11,15 @@
 |
 */
 
-Route::middleware(['auth.check'])->group(function () {
-    Route::prefix('webrtcaudiovideochat')->group(function() {
-        Route::get('/ChatRoom', 'WebRTCAudioVideoChatController@index');
+use Illuminate\Support\Facades\Route;
+
+Route::group(['middleware' => 'language'], function () {
+
+	// Admin Routes
+	Route::prefix('admin')->group(function () {    
+        
+        Route::prefix('webrtcaudiovideochat')->group(function() {
+            Route::get('/ChatRoom', 'WebRTCAudioVideoChatController@index');
+        });
     });
 });
-
