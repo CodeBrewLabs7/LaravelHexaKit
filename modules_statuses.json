@@ -3,5 +3,7 @@
     "CreateNewUsersTable": true,
     "Blog": true,
     "DynamicAttribute": true,
-    "WebRTCAudioVideoChat": true
+    "WebRTCAudioVideoChat": true,
+    "AdminPanel": true,
+    "Users": true
 }

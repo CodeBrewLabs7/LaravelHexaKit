@@ -18,7 +18,7 @@ class GuestMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        
+
         if (Auth::check()) {
             $user = Auth::user();
 
@@ -28,6 +28,9 @@ class GuestMiddleware
                     break;
                 case Users::TYPE_USER:
                     $redirectPath = 'user/dashboard';
+                    break;
+                case Users::TYPE_ADMIN:
+                    $redirectPath = 'adminpanel/dashboard';
                     break;
             }
 
