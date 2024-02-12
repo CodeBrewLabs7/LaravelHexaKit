@@ -316,7 +316,13 @@ or
 php artisan serve
 
 
+## Run the following command 
 
+sudo sh ./coding-standard.sh
+
+## Run the following command for installing PHP Documentor
+
+sudo sh ./install_phpdoc.sh
 
 
 
