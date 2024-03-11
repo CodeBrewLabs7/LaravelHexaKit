@@ -1,0 +1,27 @@
+{
+    "name": "nwidart/smsandemail",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "require": {
+        "multicaret/laravel-unifonic": "^2.0"
+
+    },
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\SmsAndEmail\\": ""
+        }
+    }
+}

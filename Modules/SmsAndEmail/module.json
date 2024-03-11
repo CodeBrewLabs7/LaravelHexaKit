@@ -1,0 +1,13 @@
+{
+    "name": "SmsAndEmail",
+    "alias": "smsandemail",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\SmsAndEmail\\Providers\\SmsAndEmailServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
