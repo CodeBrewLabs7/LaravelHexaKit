@@ -316,13 +316,21 @@ or
 php artisan serve
 
 
-## Run the following command 
+## Run the following command for Setting up Project
 
-sudo sh ./coding-standard.sh
-
-## Run the following command for installing PHP Documentor
-
-sudo sh ./install_phpdoc.sh
+    composer install
+    php artisan key:generate
+    php artisan storage:link
+    php artisan migrate
+    php artisan db:seed
+    
+    php artisan cache:clear
+    php artisan config:clear
+    php artisan view:clear
+    php artisan config:cache
+    php artisan view:cache
+    php artisan route:cache
+    composer dump-autoload
 
 
 

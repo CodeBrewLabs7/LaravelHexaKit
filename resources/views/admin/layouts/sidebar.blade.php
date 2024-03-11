@@ -141,10 +141,11 @@
                 @endif
 
                 @if(isModuleEnabled('WebRTCAudioVideoChat'))
-                
+                @if(auth()->user()->can('user-chat'))
+
                 <li class="submenu">
                     <a class="" href="javascript:void(0)" aria-expanded="false">
-                        <i data-feather="settings"></i>
+                        <i class="fas fa-comments"></i>
                         <span class="hide-menu">{{__('Chat')}} </span>
                         <span class="menu-arrow"></span>
                     </a>
@@ -161,6 +162,7 @@
                     </ul>
                 </li>
 
+                @endif
                 @endif
                 <!-- /Settings -->
 
