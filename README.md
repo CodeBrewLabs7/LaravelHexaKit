@@ -318,7 +318,7 @@ php artisan serve
 
 ## Run the following command for Setting up Project
 
-    composer install
+    ```composer install
     php artisan key:generate
     php artisan storage:link
     php artisan migrate
@@ -330,7 +330,7 @@ php artisan serve
     php artisan config:cache
     php artisan view:cache
     php artisan route:cache
-    composer dump-autoload
+    composer dump-autoload```
 
 
 
